@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+title: >-
+  Charge-and-Release Rhythms in Ore-Forming Systems: A Random
+  Matrix Theory Test of Metallogenic Timing across Four Provinces
+message: If you use this software or data, please cite it using this metadata.
+type: software
+authors:
+  - given-names: Ruqing
+    family-names: Chen
+    email: ruqing@hotmail.com
+    affiliation: 'GUT Geoservice Inc., Montreal, Canada'
+repository-code: 'https://github.com/Ruqing1963/metallogeny-rmt'
+abstract: >-
+  Random matrix theory analysis of ore-deposit timing across four metallogenic
+  provinces (Andean, Nanling, Tethyan porphyry plus orogenic gold). Single
+  ore-forming systems show GOE-class level repulsion; mixing collapses to
+  Poisson. The non-magmatic orogenic-gold control shows repulsion too, cutting
+  off the inherited-from-magma explanation and supporting an intrinsic
+  charge-and-release memory. Fourth in a unified RMT program spanning Earth
+  from core to crust.
+keywords:
+  - random matrix theory
+  - metallogeny
+  - porphyry copper
+  - tungsten-tin
+  - orogenic gold
+  - ore geochronology
+  - level repulsion
+  - spectral superposition
+license: MIT
+version: 1.0.0
+date-released: '2026-06-19'
