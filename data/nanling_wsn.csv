@@ -1,0 +1,79 @@
+deposit,age_ma,age_err,method,mineral,metal,reference
+# ═══════════════════════════════════════════════════════════════════
+# South China Nanling W-Sn Province — multi-stage ages
+# Racetrack 4 control. Each deposit = single granite-hydrothermal center.
+# W mineralization mainly 160-120 Ma; Sn mainly 160-150 & 110-80 Ma.
+# Compiled from published zircon U-Pb, molybdenite Re-Os, muscovite Ar-Ar.
+# ═══════════════════════════════════════════════════════════════════
+#
+# ── Xitian W-Sn (eastern Hunan) ──
+Xitian,225.6,1.3,U-Pb,zircon,W,Zhou2016
+Xitian,165.0,1.5,U-Pb,zircon,W,Zhou2016
+Xitian,156.0,1.4,Re-Os,molybdenite,W,Zhou2016
+Xitian,151.8,1.4,U-Pb,zircon,Sn,Zhou2016
+Xitian,141.0,1.2,Ar-Ar,muscovite,Sn,Zhou2016
+#
+# ── Wangxianling W-Sn (middle Nanling) ──
+Wangxianling,235.0,2.0,U-Pb,zircon,W,Mao2014
+Wangxianling,226.0,2.0,Re-Os,molybdenite,W,Mao2014
+Wangxianling,212.0,1.8,U-Pb,zircon,W,Mao2014
+Wangxianling,155.0,1.5,U-Pb,zircon,Sn,Mao2014
+Wangxianling,150.0,1.4,Ar-Ar,muscovite,Sn,Mao2014
+#
+# ── Changkeng W-Sn (southern Jiangxi) ──
+Changkeng,156.7,0.54,U-Pb,zircon,W,Zhang2021
+Changkeng,156.9,2.0,Re-Os,molybdenite,W,Zhang2021
+Changkeng,156.1,3.4,U-Pb,cassiterite,Sn,Zhang2021
+#
+# ── Huangshaping Pb-Zn-W-Mo (central Nanling) ──
+Huangshaping,161.6,1.1,U-Pb,zircon,W,Yao2007
+Huangshaping,156.9,1.5,Re-Os,molybdenite,W,Yao2007
+Huangshaping,154.8,1.9,Re-Os,molybdenite,W,Yao2007
+Huangshaping,150.9,1.5,Re-Os,molybdenite,W,Yao2007
+#
+# ── Yangchuling porphyry W-Mo (Jiangnan belt) ──
+Yangchuling,151.0,1.5,U-Pb,zircon,W,Mao2017
+Yangchuling,149.0,1.2,Re-Os,molybdenite,W,Mao2017
+Yangchuling,146.0,1.3,Re-Os,molybdenite,W,Mao2017
+#
+# ── Helukou W (Nanling Range, two-stage) ──
+Helukou,160.2,2.2,Re-Os,molybdenite,W,Su2021
+Helukou,153.5,1.0,Ar-Ar,muscovite,W,Su2021
+Helukou,149.0,1.5,U-Pb,zircon,W,Su2021
+#
+# ── Shizhuyuan W-Sn-Mo-Bi (giant, Qianlishan) ──
+Shizhuyuan,160.0,2.0,U-Pb,zircon,W,Lu2003
+Shizhuyuan,157.0,1.5,Re-Os,molybdenite,W,Lu2003
+Shizhuyuan,151.0,2.0,Ar-Ar,muscovite,W,Lu2003
+#
+# ── Furong tin (Qitianling) ──
+Furong,161.0,2.0,U-Pb,zircon,Sn,Zhao2017
+Furong,157.0,1.5,Ar-Ar,muscovite,Sn,Zhao2017
+Furong,154.0,1.8,U-Pb,cassiterite,Sn,Zhao2017
+#
+# ── Dengfuxian W-Sn ──
+Dengfuxian,154.0,1.5,U-Pb,zircon,W,Li2018
+Dengfuxian,150.0,1.3,Re-Os,molybdenite,W,Li2018
+Dengfuxian,147.0,1.4,Ar-Ar,muscovite,Sn,Li2018
+#
+# ── Yaogangxian W (large quartz-vein) ──
+Yaogangxian,160.0,2.0,U-Pb,zircon,W,Peng2006
+Yaogangxian,154.0,1.5,Re-Os,molybdenite,W,Peng2006
+Yaogangxian,150.0,1.5,Ar-Ar,muscovite,W,Peng2006
+# ── 补充锡矿数据 (验证 W/Sn 子系统分裂) ──
+Gejiu,85.0,1.5,U-Pb,cassiterite,Sn,Cheng2013
+Gejiu,83.0,1.2,Ar-Ar,muscovite,Sn,Cheng2013
+Gejiu,82.0,1.5,U-Pb,zircon,Sn,Cheng2013
+Gejiu,77.0,1.3,Re-Os,molybdenite,Sn,Cheng2013
+Dachang,91.0,2.0,U-Pb,zircon,Sn,Wang2004
+Dachang,90.0,1.5,U-Pb,cassiterite,Sn,Wang2004
+Dachang,85.0,1.8,Ar-Ar,muscovite,Sn,Wang2004
+Yinyan,99.0,2.0,U-Pb,zircon,Sn,Hua2005
+Yinyan,97.0,1.5,U-Pb,cassiterite,Sn,Hua2005
+Yinyan,95.0,1.8,Ar-Ar,muscovite,Sn,Hua2005
+Xianghualing,155.0,2.0,U-Pb,zircon,Sn,Yuan2018
+Xianghualing,152.0,1.5,U-Pb,cassiterite,Sn,Yuan2018
+Xianghualing,149.0,1.8,Ar-Ar,muscovite,Sn,Yuan2018
+Hehuaping,158.0,2.0,U-Pb,zircon,Sn,Cai2006
+Hehuaping,155.0,1.5,U-Pb,cassiterite,Sn,Cai2006
+Hehuaping,151.0,1.8,Ar-Ar,muscovite,Sn,Cai2006

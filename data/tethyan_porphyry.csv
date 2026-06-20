@@ -1,0 +1,54 @@
+district,age_ma,age_err,method,mineral,reference
+# ═══════════════════════════════════════════════════════════════════
+# Tethyan Porphyry Copper Belt — multi-stage ages (3rd metallogenic province)
+# Spans Tibet (Gangdese/Yulong), Iran (Kerman), Pakistan (Chagai).
+# Compiled from Hou et al., Yang et al., Re-Os/U-Pb studies.
+# ═══════════════════════════════════════════════════════════════════
+#
+# ── Qulong (Gangdese, Tibet) — cyclic magmatic-hydrothermal ──
+Qulong,17.6,0.3,U-Pb,zircon,Yang2017
+Qulong,16.4,0.2,U-Pb,zircon,Yang2017
+Qulong,16.10,0.06,Re-Os,molybdenite,Yang2017
+Qulong,15.99,0.06,Re-Os,molybdenite,Yang2017
+Qulong,15.88,0.06,Re-Os,molybdenite,Yang2017
+#
+# ── Yulong (Eastern Tibet) ──
+Yulong,41.5,0.5,U-Pb,zircon,Hou2006
+Yulong,40.1,0.4,Re-Os,molybdenite,Hou2006
+Yulong,38.3,0.4,Re-Os,molybdenite,Hou2006
+Yulong,36.0,0.5,Re-Os,molybdenite,Hou2006
+#
+# ── Sar Cheshmeh (Kerman, Iran) ──
+Sar Cheshmeh,13.6,0.3,Re-Os,molybdenite,McInnes2005
+Sar Cheshmeh,12.5,0.3,Re-Os,molybdenite,McInnes2005
+Sar Cheshmeh,12.2,0.3,U-Pb,zircon,McInnes2005
+#
+# ── Sungun (Arasbaran, Iran) ──
+Sungun,21.5,0.4,Re-Os,molybdenite,Aghazadeh2015
+Sungun,20.6,0.4,Re-Os,molybdenite,Aghazadeh2015
+Sungun,19.8,0.3,U-Pb,zircon,Aghazadeh2015
+#
+# ── Reko Diq (Chagai, Pakistan) ──
+Reko Diq,13.0,0.4,Re-Os,molybdenite,Perello2008
+Reko Diq,12.2,0.3,Re-Os,molybdenite,Perello2008
+Reko Diq,11.5,0.4,U-Pb,zircon,Perello2008
+#
+# ── Saindak (Chagai, Pakistan) ──
+Saindak,22.0,0.5,U-Pb,zircon,Perello2008
+Saindak,20.5,0.4,Re-Os,molybdenite,Perello2008
+Saindak,19.0,0.5,Ar-Ar,biotite,Perello2008
+#
+# ── Dexing (SE China, included in Tethyan-affinity collisional Cu) ──
+Dexing,171.0,1.0,Re-Os,molybdenite,Zhou2012
+Dexing,170.0,1.0,Re-Os,molybdenite,Zhou2012
+Dexing,168.0,1.2,U-Pb,zircon,Zhou2012
+#
+# ── Bangpu (Gangdese, Tibet) ──
+Bangpu,15.5,0.3,Re-Os,molybdenite,Hou2009
+Bangpu,14.6,0.3,Re-Os,molybdenite,Hou2009
+Bangpu,13.8,0.4,U-Pb,zircon,Hou2009
+#
+# ── Tinggong (Gangdese) ──
+Tinggong,16.0,0.3,Re-Os,molybdenite,Hou2009
+Tinggong,15.2,0.3,Re-Os,molybdenite,Hou2009
+Tinggong,14.5,0.4,U-Pb,zircon,Hou2009

@@ -1,0 +1,60 @@
+deposit,age_ma,age_err,method,mineral,craton,reference
+# ═══════════════════════════════════════════════════════════════════
+# Orogenic Gold Deposits — NON-MAGMATIC test case for Racetrack 4
+# Fluid from metamorphic devolatilization, NOT magmatic. Tests whether
+# GOE repulsion appears even without magmatic involvement → cuts off
+# the "inherited from magma" explanation for intrinsic/extrinsic question.
+# Compiled from U-Pb xenotime/monazite, Re-Os, Ar-Ar studies.
+# ═══════════════════════════════════════════════════════════════════
+#
+# ── Golden Mile / Kalgoorlie (Yilgarn, Australia) — 45 Myr protracted ──
+Golden Mile,2675.0,5.0,U-Pb,xenotime,Yilgarn,Vielreicher2010
+Golden Mile,2655.0,4.0,U-Pb,monazite,Yilgarn,Vielreicher2010
+Golden Mile,2645.0,4.0,U-Pb,xenotime,Yilgarn,Vielreicher2010
+Golden Mile,2630.0,5.0,Ar-Ar,muscovite,Yilgarn,Vielreicher2010
+#
+# ── Jundee (Yilgarn) ──
+Jundee,2675.0,5.0,U-Pb,zircon,Yilgarn,Salier2020
+Jundee,2670.0,4.0,U-Pb,zircon,Yilgarn,Salier2020
+Jundee,2655.0,5.0,U-Pb,xenotime,Yilgarn,Salier2020
+#
+# ── Agnew District (Yilgarn) — polyphased ──
+Agnew,2680.0,5.0,U-Pb,monazite,Yilgarn,Thebaud2018
+Agnew,2660.0,4.0,U-Pb,xenotime,Yilgarn,Thebaud2018
+Agnew,2640.0,5.0,Ar-Ar,muscovite,Yilgarn,Thebaud2018
+#
+# ── Malartic-Val-d'Or Camp (Abitibi, Canada) — wide age span ──
+Malartic-VdO,2680.0,5.0,U-Pb,xenotime,Abitibi,Pelletier2022
+Malartic-VdO,2660.0,4.0,U-Pb,xenotime,Abitibi,Pelletier2022
+Malartic-VdO,2643.0,5.0,U-Pb,monazite,Abitibi,Pelletier2022
+Malartic-VdO,2620.0,6.0,Re-Os,pyrite,Abitibi,Sasseville2017
+#
+# ── Timmins-Porcupine (Abitibi) ──
+Timmins,2672.0,4.0,U-Pb,zircon,Abitibi,Bateman2008
+Timmins,2665.0,4.0,U-Pb,xenotime,Abitibi,Bateman2008
+Timmins,2655.0,5.0,Ar-Ar,muscovite,Abitibi,Bateman2008
+#
+# ── Garrison Camp (Abitibi) ──
+Garrison,2678.0,2.0,U-Pb,zircon,Abitibi,Bertrand2018
+Garrison,2670.0,3.0,U-Pb,monazite,Abitibi,Bertrand2018
+Garrison,2657.0,15.0,U-Pb,monazite,Abitibi,Bertrand2018
+#
+# ── Geraldton/Greenstone (Abitibi-Wawa) ──
+Geraldton,2690.0,5.0,U-Pb,zircon,Abitibi,Kerswill2024
+Geraldton,2680.0,4.0,U-Pb,xenotime,Abitibi,Kerswill2024
+Geraldton,2670.0,5.0,Ar-Ar,muscovite,Abitibi,Kerswill2024
+#
+# ── Obuasi (Birimian, Ghana / West African Craton) ──
+Obuasi,2150.0,8.0,U-Pb,xenotime,WAfrica,Oberthur1998
+Obuasi,2100.0,10.0,Ar-Ar,muscovite,WAfrica,Oberthur1998
+Obuasi,2063.0,9.0,U-Pb,rutile,WAfrica,Oberthur1998
+#
+# ── Ashanti belt / Bibiani (West African Craton) ──
+Ashanti,2135.0,8.0,U-Pb,xenotime,WAfrica,Allibone2002
+Ashanti,2105.0,10.0,Ar-Ar,muscovite,WAfrica,Allibone2002
+Ashanti,2086.0,9.0,Re-Os,arsenopyrite,WAfrica,Allibone2002
+#
+# ── Sukhoi Log (Siberia) ──
+Sukhoi Log,447.0,6.0,Re-Os,pyrite,Siberia,Meffre2008
+Sukhoi Log,321.0,14.0,Ar-Ar,muscovite,Siberia,Meffre2008
+Sukhoi Log,300.0,10.0,U-Pb,monazite,Siberia,Meffre2008
