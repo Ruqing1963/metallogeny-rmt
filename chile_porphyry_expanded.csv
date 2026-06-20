@@ -1,0 +1,79 @@
+district,age_ma,age_err,method,mineral,reference
+# ═══════════════════════════════════════════════════════════════════
+# Chilean / Andean Porphyry Copper — EXPANDED multi-stage ages
+# Racetrack 4 (metallogeny RMT). Each district = single magmatic-
+# hydrothermal center. Compiled from published Re-Os/U-Pb/Ar-Ar.
+# ═══════════════════════════════════════════════════════════════════
+#
+# ── El Salvador / Indio Muerto ──
+El Salvador,46.0,1.0,U-Pb,zircon,Gustafson1975
+El Salvador,44.0,0.8,U-Pb,zircon,Cornejo1997
+El Salvador,42.0,0.6,U-Pb,zircon,Cornejo1997
+El Salvador,41.0,0.5,U-Pb,zircon,Gustafson1975
+El Salvador,36.34,0.10,Re-Os,molybdenite,Zentilli2015
+El Salvador,36.18,0.10,Re-Os,molybdenite,Zentilli2015
+#
+# ── Escondida ──
+Escondida,38.0,0.3,Re-Os,molybdenite,Romero2011
+Escondida,37.9,0.3,Re-Os,molybdenite,Romero2011
+Escondida,37.7,0.3,Re-Os,molybdenite,Romero2011
+Escondida,36.6,0.2,Re-Os,molybdenite,Romero2011
+Escondida,36.1,0.2,Re-Os,molybdenite,Romero2011
+Escondida,35.2,0.2,Re-Os,molybdenite,Romero2011
+#
+# ── Chuquicamata ──
+Chuquicamata,35.2,0.4,Re-Os,molybdenite,Barra2013
+Chuquicamata,34.6,0.3,Re-Os,molybdenite,Ossandon2001
+Chuquicamata,33.4,0.3,Re-Os,molybdenite,Ossandon2001
+Chuquicamata,32.5,0.3,Re-Os,molybdenite,Barra2013
+Chuquicamata,31.1,0.3,U-Pb,zircon,Ballard2001
+#
+# ── El Teniente (>20 Re-Os ages; 5 main pulses + spread) ──
+El Teniente,6.30,0.03,Re-Os,molybdenite,Maksaev2004
+El Teniente,5.60,0.02,Re-Os,molybdenite,Maksaev2004
+El Teniente,5.01,0.07,Re-Os,molybdenite,Maksaev2004
+El Teniente,4.89,0.08,Re-Os,molybdenite,Maksaev2004
+El Teniente,4.78,0.03,Re-Os,molybdenite,Maksaev2004
+El Teniente,4.58,0.10,Re-Os,molybdenite,Spencer2015
+El Teniente,4.42,0.02,U-Pb,zircon,Maksaev2004
+#
+# ── Rio Blanco-Los Bronces ──
+Rio Blanco,8.36,0.10,Re-Os,molybdenite,Deckart2014
+Rio Blanco,6.70,0.03,Re-Os,molybdenite,Deckart2013
+Rio Blanco,6.30,0.10,Re-Os,molybdenite,Deckart2013
+Rio Blanco,5.40,0.20,Re-Os,molybdenite,Deckart2013
+Rio Blanco,5.20,0.10,U-Pb,zircon,Deckart2013
+Rio Blanco,4.50,0.02,Re-Os,molybdenite,Deckart2013
+#
+# ── El Abra ──
+El Abra,38.5,0.4,Re-Os,molybdenite,Valente2004
+El Abra,37.6,0.4,Re-Os,molybdenite,Valente2004
+El Abra,36.9,0.3,Re-Os,molybdenite,Valente2004
+El Abra,36.2,0.3,U-Pb,zircon,Campbell2006
+#
+# ── Collahuasi (Rosario/Ujina) ──
+Collahuasi,34.4,0.3,Re-Os,molybdenite,Masterman2004
+Collahuasi,33.3,0.3,Re-Os,molybdenite,Masterman2004
+Collahuasi,32.6,0.3,Re-Os,molybdenite,Masterman2004
+Collahuasi,31.9,0.3,Re-Os,molybdenite,Masterman2004
+#
+# ── Los Pelambres ──
+Los Pelambres,11.8,0.3,Re-Os,molybdenite,Perello2012
+Los Pelambres,11.0,0.3,Re-Os,molybdenite,Perello2012
+Los Pelambres,10.2,0.3,Re-Os,molybdenite,Perello2012
+Los Pelambres,9.8,0.3,U-Pb,zircon,Perello2012
+#
+# ── Brahma prospect (Central Chile, 3 events) ──
+Brahma,14.0,0.5,Re-Os,molybdenite,Lopez2020
+Brahma,12.0,0.4,Re-Os,molybdenite,Lopez2020
+Brahma,10.0,0.4,Re-Os,molybdenite,Lopez2020
+#
+# ── Cerro Colorado ──
+Cerro Colorado,52.0,0.5,Re-Os,molybdenite,Bouzari2006
+Cerro Colorado,51.0,0.5,Re-Os,molybdenite,Bouzari2006
+Cerro Colorado,49.5,0.4,Ar-Ar,sericite,Bouzari2006
+#
+# ── Quebrada Blanca ──
+Quebrada Blanca,38.5,0.4,Re-Os,molybdenite,Rowland2006
+Quebrada Blanca,37.4,0.4,Re-Os,molybdenite,Rowland2006
+Quebrada Blanca,36.5,0.3,U-Pb,zircon,Rowland2006
