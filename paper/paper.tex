@@ -6,6 +6,8 @@
 \usepackage{graphicx}
 \usepackage[margin=1in]{geometry}
 \usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{placeins}
 \usepackage{hyperref}
 \usepackage{natbib}
 \usepackage{caption}
@@ -14,13 +16,16 @@
 \usepackage{xcolor}
 \usepackage{xurl}
 \onehalfspacing
+\setlength{\emergencystretch}{3em}
 \hypersetup{colorlinks=true,linkcolor=blue!60!black,citecolor=blue!60!black,urlcolor=blue!60!black,breaklinks=true}
 
-\title{\textbf{Charge-and-Release Rhythms in Ore-Forming Systems:\\
-A Random Matrix Theory Test of Metallogenic Timing across\\
-Four Provinces, Including a Non-Magmatic Control}\\[4pt]
-\large Single Ore Systems Show Level Repulsion Whether or Not\\
-Magmatism Is Involved}
+\newcommand{\rbar}{\langle r\rangle}
+
+\title{\textbf{Charge-and-Release Rhythms in Ore-Forming Systems Are\\
+Scalar Clocks, Not Level Repulsion:\\
+A Cautionary Random-Matrix Analysis of Metallogenic Timing}\\[4pt]
+\large Version 2.0 (erratum). A single ore system is a relaxation\\
+oscillator---a scalar renewal clock---structurally not a GOE spectrum}
 
 \author{Ruqing Chen\\
 \textit{GUT Geoservice Inc., Montreal, Canada}\\
@@ -31,110 +36,383 @@ Magmatism Is Involved}
 \maketitle
 
 \begin{abstract}
-We test whether the timing of ore-forming pulses within hydrothermal mineral deposits carries the level-repulsion signature of random matrix theory (RMT), extending a program that found GOE-class repulsion in geological boundaries, seismotectonic rhythms, and mantle-plume eruptions. The motivation is a charge-and-release hypothesis: each mineralization pulse depletes the local metal, fluid, and heat budget of an ore system, which must re-accumulate before the next pulse, imposing a minimum recurrence interval analogous to eigenvalue repulsion. Using compiled multi-stage geochronology from \emph{four} metallogenic provinces---Andean porphyry copper (subduction arc; 11 districts), South China Nanling W--Sn (intracontinental granite; 15 deposits), Tethyan porphyry copper (collisional; 9 districts), and orogenic gold (metamorphic, \emph{non-magmatic}; 10 deposits across the Yilgarn, Abitibi, and West African cratons)---we contrast single-source and mixed configurations. \textbf{Single sources show level repulsion in all four provinces}: pooled spacing ratios are $\langle r\rangle=0.60$ (Chile), 0.57 (Nanling), 0.71 (Tethyan), and 0.68 (gold), with bootstrap 95\% confidence intervals that all exclude Poisson (0.386). \textbf{Mixed} configurations collapse toward Poisson ($\langle r\rangle=0.31$--0.47). The source-separation effect is consistent across all five deep-Earth systems we have now studied (mantle plumes plus these four). Crucially, \emph{orogenic gold---whose fluids derive from metamorphic devolatilization, not magmatism---shows the same repulsion}, which cuts off the explanation that the signal is merely inherited from magmatic-intrusion cyclicity and supports an intrinsic charge-release memory. We argue for a unifying principle: GOE-class repulsion emerges wherever a single long-memory process is isolated, and Poisson emerges wherever many independent sources superpose. We remain explicit that the compiled ages are representative literature values, not a systematic census, and that GOE-versus-GUE is not resolved at present sample sizes.
+\noindent\textbf{This is version~2.0, a self-correcting erratum.} Version~1 of
+this work claimed that the multi-stage timing of single ore-forming systems
+carries the Gaussian-orthogonal/unitary-ensemble (GOE/GUE) \emph{level-repulsion}
+signature of random matrix theory (RMT), interpreted as a charge-and-release
+``memory.'' That central claim was wrong, and we retract it here. Re-auditing the
+identical data with the diagnostics the original analysis omitted---the shuffle
+(permutation) test, the coefficient of variation (CV), an i.i.d.\ renewal-clock
+comparison, and an age-error Monte Carlo---shows that the high spacing ratios are
+a \emph{scalar-clock} (narrow-marginal renewal) signature, not sequential level
+repulsion. The pooled spacing ratios are reproduced \emph{exactly}
+($\rbar=0.60$ Andean, 0.57 Nanling, 0.71 Tethyan, 0.68 orogenic gold), but (i)~they
+are invariant under shuffling, so they reflect the marginal spacing distribution,
+not the sequence; (ii)~a zero-repulsion gamma renewal clock with the same CV
+reproduces every value; (iii)~the small negative ``rigidity'' (obs$-$shuf
+$=-0.031$ for gold) is fully reproduced by pushing a \emph{zero-repulsion} null
+through the same within-deposit mean-normalization---it is a closed-data
+(compositional) artifact, not spectral rigidity; and (iv)~within the quoted
+geochronological errors the pooled $\rbar$ ranges across the entire
+Poisson-to-GUE axis, so the point estimate is unresolvable at these sample sizes
+($n=21$--$40$, far below the $n\gtrsim300$ needed to distinguish a scalar clock
+from GOE)---and the $\pm1$--$5$~Ma analytical errors of the underlying chronometers
+are themselves comparable to the intervals, so isotopic dating cannot in principle
+resolve the sequential rigidity a Wigner--Dyson spectrum would require. A charge-and-release reservoir is a classical relaxation oscillator,
+i.e.\ a renewal process; by the Bohigas--Giannoni--Schmit criterion it is
+structurally \emph{not} a chaotic GOE spectrum. \textbf{What survives is the
+superposition result:} pooling many independent sources drives the local
+statistic toward Poisson ($\rbar\to0.39$), a genuine and retained finding. We
+keep the four-province dataset and the superposition analysis, retract the
+level-repulsion interpretation, and reframe single ore systems as scalar
+charge-release clocks. Basis of the correction: the scalar-clock audit note,
+Zenodo \url{https://doi.org/10.5281/zenodo.20980670}.
 
 \medskip
-\noindent\textbf{Keywords:} random matrix theory; metallogeny; porphyry copper; tungsten-tin; orogenic gold; ore geochronology; level repulsion; spectral superposition
+\noindent\textbf{Keywords:} random matrix theory; scalar clock; renewal process;
+relaxation oscillator; metallogeny; ore geochronology; spectral superposition;
+self-correction
 
 \medskip
-\noindent\textbf{Code/data:} \url{https://github.com/Ruqing1963/metallogeny-rmt}\\
-\textbf{Companion studies:} \url{https://zenodo.org/records/20766310} ; \url{https://zenodo.org/records/20768130} ; \url{https://zenodo.org/records/20768420}
+\noindent\textbf{Code/data:} \url{https://github.com/Ruqing1963/metallogeny-rmt}
 \end{abstract}
+
+\section{Changes from version~1 (erratum)}
+\label{sec:changes}
+
+This section states plainly what changed and why, so that readers of version~1 can
+see exactly which claims are withdrawn.
+
+\begin{itemize}
+\item \textbf{Retracted.} The claim that single ore-forming systems exhibit
+GOE/GUE \emph{level repulsion}, and the associated ``intrinsic charge-release
+memory'' and ``grand unification of five deep-Earth systems'' framing. The
+non-magmatic orogenic-gold ``control'' does \emph{not} establish intrinsic
+repulsion; like the magmatic provinces it is a scalar clock.
+\item \textbf{Why.} The spacing ratio $\rbar$ is two-ended: a high value can come
+either from genuine sequential level repulsion \emph{or} from a narrow marginal
+(scalar) spacing distribution. Version~1 read a high $\rbar$ as repulsion without
+running the shuffle test that separates the two. A charge-and-release reservoir
+is a relaxation oscillator---a renewal process with a characteristic recurrence
+time---whose narrow interval distribution produces a high $\rbar$ with \emph{no}
+sequential correlation. By the Bohigas--Giannoni--Schmit criterion
+\citep{bgs1984}, genuine GOE requires a chaotic, strongly-mixed spectrum, which an
+integrable relaxation oscillator is not.
+\item \textbf{Retained (real).} The four-province compiled dataset, and the
+\emph{superposition} result: pooling intervals across many independent sources
+drives the spacing ratio toward Poisson ($\rbar\to0.386$). This is the standard
+superposition theorem for point processes \citep{daley2003} and is unaffected by
+the correction.
+\item \textbf{Added.} The shuffle (permutation) test on every series; the
+CV of the pooled spacings and an i.i.d.\ gamma renewal-clock comparison; a
+closed-data control showing the apparent negative ``rigidity'' is a normalization
+artifact; and an age-error Monte Carlo showing the point estimate is
+unresolvable. New code: \texttt{code/audit\_scalar\_clock.py}.
+\item \textbf{Basis.} The methodological diagnoses are established in the
+scalar-clock audit note, Zenodo \url{https://doi.org/10.5281/zenodo.20980670}.
+\item \textbf{Preserved.} Version~1 (text, figures, results) is preserved in the
+git history (tag \texttt{v1.0}), in \texttt{paper/archive/v1/}, and as the prior
+Zenodo version. License unchanged (MIT).
+\end{itemize}
 
 \section{Introduction}
 
-Ore deposits form in pulses. A single porphyry copper system, granite-related W--Sn deposit, or orogenic gold camp typically records several discrete mineralization stages \citep{sillitoe2010,chelle2017}. Whether the timing of these pulses is random or carries memory is a question about the dynamics of ore-forming systems.
+Ore deposits form in pulses. A single porphyry copper system, granite-related
+W--Sn deposit, or orogenic gold camp typically records several discrete
+mineralization stages \citep{sillitoe2010,chelle2017}. Version~1 of this paper
+asked whether the timing of those pulses carries the level-repulsion signature of
+random matrix theory \citep{wigner1957,mehta2004}, motivated by a
+\emph{charge-and-release hypothesis}: each pulse depletes the local metal, fluid,
+and heat budget, which must re-accumulate before the next, imposing a minimum
+recurrence interval. Version~1 reported high spacing ratios in four provinces and
+read them as GOE/GUE repulsion.
 
-We propose a \emph{charge-and-release hypothesis}: each major mineralization pulse depletes the local reservoir of metal, fluid, and heat, which must then re-accumulate before the next pulse can occur. This imposes a minimum recurrence interval and a suppression of short inter-pulse spacings---the level repulsion of random matrix theory \citep{wigner1957,mehta2004}. The mechanism is structurally identical to the thermal-shadow mechanism we proposed for mantle plumes \citep{chen2026plume}: a pulse exhausts a local resource that must be replenished.
+That reading conflated two physically distinct situations. The spacing ratio
+$\rbar$ \citep{oganesyan2007,atas2013} is \emph{two-ended}. A value well above the
+Poisson expectation ($0.386$) can arise from (i)~genuine sequential level
+repulsion, in which the position of each level depends on its neighbours
+(spectral rigidity), or (ii)~a narrow \emph{marginal} distribution of spacings
+with \emph{no} sequential structure---a ``scalar clock.'' A relaxation oscillator
+that fires at a roughly fixed recurrence time (a charge-and-release reservoir, a
+dripping tap, a geyser) is exactly case~(ii): its intervals cluster around a
+characteristic value, giving a high $\rbar$, while successive intervals are
+statistically independent. The two cases are distinguished by the \emph{shuffle
+test}: randomly permuting the spacings destroys any sequential structure while
+preserving the marginal. Genuine repulsion is degraded by shuffling (the rigid
+spectrum has obs$<$shuf); a scalar clock is shuffle-invariant (obs$\approx$shuf).
+Version~1 never ran this test.
 
-This study extends a three-racetrack RMT program \citep{chen2026geo,chen2026fault,chen2026plume} to metallogeny. A recurring lesson is the spectral superposition theorem: the sum of many independent renewal processes tends to Poisson \citep{daley2003}, so single-source signals are erased by mixing. We design around source isolation.
+The deeper point is structural. By the Bohigas--Giannoni--Schmit criterion
+\citep{bgs1984}, GOE statistics are the fingerprint of a \emph{chaotic,
+strongly-mixed} quantum (or wave) spectrum. A classical relaxation oscillator is
+integrable, not chaotic; its inter-event times form a renewal process. A
+charge-and-release ore reservoir is therefore, on physical grounds, a scalar
+renewal clock and \emph{cannot} be a GOE spectrum, whatever the numerical value of
+$\rbar$. This erratum makes that argument quantitative on the original data.
 
-The central scientific subtlety of metallogeny is that ore formation in magmatic-hydrothermal systems is externally triggered by tectonic-magmatic events \citep{sillitoe2010}, so a GOE signal could be \emph{inherited} from magmatic cyclicity rather than reflecting intrinsic charge-release memory. We address this directly by including a non-magmatic control: orogenic gold deposits, whose ore fluids derive from metamorphic devolatilization during orogenesis, with no direct genetic link to magmatism \citep{goldfarb2005}. If orogenic gold also shows repulsion, the signal cannot be merely inherited from magmatic intrusion timing.
+\section{Data and methods}
 
-\section{Data and Methods}
+\subsection{Datasets (unchanged from v1)}
+We use the same compiled multi-stage absolute ages for four provinces:
+(1)~\emph{Andean porphyry copper} (subduction; 11 districts, Re--Os/U--Pb/Ar--Ar)
+\citep{maksaev2004,romero2011,deckart2013};
+(2)~\emph{South China Nanling W--Sn} (intracontinental granite; 15 deposits)
+\citep{mao2017,zhou2016};
+(3)~\emph{Tethyan porphyry copper} (collisional; 9 districts across Tibet, Iran,
+Pakistan) \citep{hou2009,yang2017};
+(4)~\emph{orogenic gold} (metamorphic, non-magmatic; 10 deposits across the
+Yilgarn, Abitibi, and West African cratons) \citep{vielreicher2010,pelletier2022,oberthur1998}.
+Each district/deposit is treated as one source. These are representative
+literature ages, not a systematic census.
 
-\subsection{Datasets}
-We compiled multi-stage absolute ages for four provinces. (1)~\emph{Andean porphyry copper}: 51 ages, 11 districts, dominated by Re--Os molybdenite \citep{maksaev2004,romero2011,deckart2013}. (2)~\emph{South China Nanling W--Sn}: 51 ages, 15 deposits, combining zircon U--Pb, molybdenite Re--Os, cassiterite U--Pb, and muscovite Ar--Ar \citep{mao2017,zhou2016}. (3)~\emph{Tethyan porphyry copper}: 30 ages, 9 districts spanning Tibet (Gangdese/Yulong), Iran (Kerman/Arasbaran), and Pakistan (Chagai) \citep{hou2009,yang2017}. (4)~\emph{Orogenic gold}: 32 ages, 10 deposits across the Yilgarn (Australia), Abitibi (Canada), and West African cratons, using U--Pb xenotime/monazite, Re--Os sulfide, and Ar--Ar \citep{vielreicher2010,pelletier2022,oberthur1998}. Each district/deposit is treated as a single ore-forming source.
+\noindent\textbf{What the within-deposit ``intervals'' actually are.} It is
+important to be explicit. Within a deposit, the intervals are differences between
+ages obtained by \emph{different geochronometers} (U--Pb xenotime, U--Pb
+monazite, Ar--Ar muscovite, Re--Os sulfide) on what is often a single
+mineralizing episode. For Golden Mile, for example, the four ages
+$2675,2655,2645,2630$~Ma give ``intervals'' of $20,10,15$~Myr---comparable to the
+individual $\pm4$--$5$~Myr age uncertainties. The quantity version~1 analysed is
+therefore dominated by inter-method geochronological scatter, not by resolved
+province-scale recurrence.
 
-\noindent\textbf{Data caveat.} These are representative ages from the published literature and reviews, not a systematic census, and suffice for a feasibility-level test.
-
-\subsection{RMT analysis}
-We sort ages, compute inter-event intervals, normalize each source to unit mean (unfolding), pool, and evaluate the spacing ratio $\langle r\rangle$ \citep{atas2013} (Poisson 0.386, GOE 0.536, GUE 0.603), KS tests, and a bootstrap 95\% CI. Per-source unfolding prevents differing mean rates from inducing structure.
+\subsection{RMT spacing ratio and the diagnostics v1 omitted}
+For each source we sort the ages, take inter-event intervals
+$s_i=x_{i+1}-x_i$, normalize each source to unit mean, and pool. We compute the
+unfolding-free consecutive spacing ratio
+\begin{equation}
+\rbar=\Big\langle \frac{\min(s_i,s_{i+1})}{\max(s_i,s_{i+1})}\Big\rangle ,
+\end{equation}
+with reference values Poisson $0.386$, GOE $0.531$, GUE $0.603$
+\citep{oganesyan2007,atas2013}. To this we add four diagnostics:
+\begin{enumerate}
+\item \textbf{Shuffle test.} Randomly permute the pooled spacings (preserving the
+marginal, destroying the sequence) and recompute $\rbar$. We report
+obs$-$shuf. A scalar clock gives obs$\approx$shuf; genuine GOE gives a small
+negative obs$-$shuf (spectral rigidity), resolvable only for $n\gtrsim300$.
+\item \textbf{CV and gamma renewal clock.} We compute CV~$=\sigma/\mu$ of the
+pooled spacings and compare $\rbar$ to that of a zero-repulsion i.i.d.\ gamma
+renewal process of the same CV (shape $k=\mathrm{CV}^{-2}$), sampled at the same
+$n$.
+\item \textbf{Closed-data control.} We push a zero-repulsion i.i.d.\ gamma null
+through the \emph{same} within-deposit mean-normalization ($s_i\to s_i/\bar s$ per
+deposit) and pooling, and measure its obs$-$shuf. Mean-normalization forces
+$\sum_i s_i=\text{const}$ per deposit, a closed/compositional constraint that
+induces negative correlation by construction.
+\item \textbf{Age-error Monte Carlo.} We jitter every age within its quoted
+$1\sigma$ error (Gaussian), recompute the pooled $\rbar$, and report its
+distribution.
+\end{enumerate}
+All diagnostics are implemented in \texttt{code/audit\_scalar\_clock.py}; the
+original pooled $\rbar$ is reproduced by \texttt{code/metallogeny\_rmt.py}.
 
 \section{Results}
 
-\subsection{All four provinces show single-source repulsion}
-Pooling per-source unfolded intervals yields level repulsion in every province (Table~\ref{tab:main}, Figure~\ref{fig:four}). All four bootstrap CIs exclude Poisson; KS tests reject Poisson and prefer GOE/GUE.
+\subsection{The spacing ratios are reproduced---and are shuffle-invariant}
+We reproduce the version~1 spacing ratios exactly (Table~\ref{tab:audit}). But the
+shuffle test, absent from version~1, removes the level-repulsion reading: at every
+province obs$\approx$shuf (Figure~\ref{fig:scalar}b). For orogenic gold,
+$\rbar_{\rm obs}=0.678$ while $\rbar_{\rm shuf}=0.709$, i.e.\ obs$-$shuf$=-0.031$;
+the others are $+0.040$ (Andean), $-0.001$ (Nanling), $+0.074$ (Tethyan). There is
+no consistent negative rigidity. The high spacing ratios are a property of the
+\emph{marginal} spacing distribution, not of the sequence.
 
 \begin{table}[H]
 \centering
-\caption{Single-source (pooled) versus mixed configurations across four metallogenic provinces. Every province shows repulsion when sources are isolated and collapses when mixed.}
-\label{tab:main}
+\caption{Audit of the four provinces. The version~1 spacing ratios are reproduced
+exactly, but are shuffle-invariant (column obs$-$shuf), are reproduced by a
+zero-repulsion gamma clock of the same CV, and are not resolvable within age error
+(MC range). $n$ is the number of pooled within-source intervals.}
+\label{tab:audit}
 \small
-\begin{tabular}{llccccc}
+\begin{tabular}{lcccccc}
 \toprule
-Province (setting) & Config. & $n$ & $\langle r\rangle$ & $\hat\beta$ & 95\% CI & Mixed $\langle r\rangle$ \\
+Province (setting) & $n$ & $\rbar_{\rm obs}$ & obs$-$shuf & CV & gamma clock $\rbar$ & age-error MC \\
+ & & (=v1) & (shuffle) & & (95\% band) & $\rbar$ [2.5--97.5\%] \\
 \midrule
-Andean porphyry Cu (subduction) & Single & 40 & 0.601 & 1.97 & [0.471, 0.670] & 0.470 \\
-Nanling W--Sn (intracontinental) & Single & 36 & 0.574 & 1.57 & [0.488, 0.685] & 0.307 \\
-Tethyan porphyry Cu (collision) & Single & 21 & 0.712 & 3.00 & [0.510, 0.797] & 0.391 \\
-Orogenic gold (\emph{non-magmatic}) & Single & 22 & 0.678 & 2.75 & [0.606, 0.823] & 0.432 \\
+Andean porphyry Cu (subduction)    & 40 & 0.601 & $+0.040$ & 0.545 & 0.58 [0.49,\,0.67] & [0.37,\,0.56] \\
+Nanling W--Sn (intracontinental)   & 36 & 0.574 & $-0.001$ & 0.578 & 0.56 [0.47,\,0.66] & [0.35,\,0.57] \\
+Tethyan porphyry Cu (collision)    & 21 & 0.712 & $+0.074$ & 0.509 & 0.60 [0.48,\,0.71] & [0.37,\,0.65] \\
+Orogenic gold (\emph{non-magmatic})& 22 & 0.678 & $-0.031$ & 0.310 & 0.73 [0.63,\,0.81] & [0.39,\,0.67] \\
 \bottomrule
 \end{tabular}
 \end{table}
 
+\subsection{A zero-repulsion clock of the same CV reproduces every value}
+The spacing ratio is fixed by the CV of the marginal distribution. A zero-repulsion
+i.i.d.\ gamma renewal process with the same CV, sampled at the same $n$, brackets
+the observed $\rbar$ in all four provinces (Table~\ref{tab:audit};
+Figure~\ref{fig:scalar}a): every province sits inside the finite-$n$ 95\% band of
+the scalar clock. The orogenic-gold case is the clearest---its low CV ($0.31$)
+\emph{is} its high $\rbar$ ($0.68$); no repulsion is needed or implied.
+
 \begin{figure}[H]
 \centering
-\includegraphics[width=\textwidth]{figs/fig1_four_province.pdf}
-\caption{Single-source pooled spacing distributions for all four metallogenic provinces. Each lies in the GOE--GUE range; none is Poisson.}
-\label{fig:four}
+\includegraphics[width=\textwidth]{figs/fig1_scalar_clock.pdf}
+\caption{(a)~The spacing ratio is set by the CV alone. The solid curve is $\rbar$
+for a zero-repulsion i.i.d.\ gamma renewal clock as a function of CV, with the
+finite-$n$ 95\% band shaded; all four provinces sit inside it. (b)~Observed vs
+shuffled $\rbar$. obs$\approx$shuf at every province (obs$-$shuf printed above the
+bars): the signal is in the marginal distribution, not the sequence.}
+\label{fig:scalar}
 \end{figure}
 
-\subsection{The non-magmatic control}
-Orogenic gold, whose fluids derive from metamorphic devolatilization with no direct magmatic link, shows repulsion as strong as the magmatic provinces ($\langle r\rangle=0.678$, CI $[0.606,0.823]$). Grouped by craton, the signal is consistent: Yilgarn $\langle r\rangle=0.65$, Abitibi 0.77, West Africa 0.68, with a two-sample KS test between Yilgarn and Abitibi finding no difference ($p=0.83$). The repulsion is therefore a cross-cratonic feature of orogenic gold, not a peculiarity of one belt. Because no magmatism is involved, this repulsion cannot be inherited from magmatic-intrusion timing---it points to an intrinsic charge-release memory in the ore system itself (here, repeated fluid focusing along reactivated shear zones).
+\subsection{The apparent ``rigidity'' is a closed-data artifact}
+The one province with a notable negative obs$-$shuf is orogenic gold
+($-0.031$). This is not spectral rigidity. Pushing a \emph{zero-repulsion} i.i.d.\
+gamma null through version~1's own within-deposit mean-normalization and pooling
+yields obs$-$shuf$=-0.028\pm0.021$ for the gold configuration---statistically
+identical to the observed $-0.031$. Mean-normalizing each deposit's intervals to
+unit mean forces their sum to be constant, a closed (compositional) constraint
+that induces a spurious negative lag-1 correlation. The negative value is
+manufactured by the construction, not by the data.
 
-\subsection{Grand unification across five systems}
-Combining with mantle plumes \citep{chen2026plume}, five physically unrelated systems---core--mantle boundary plumes, subduction-arc porphyry Cu, intracontinental granite W--Sn, collisional porphyry Cu, and metamorphic orogenic gold---all show single-source repulsion that collapses to Poisson on mixing (Figure~\ref{fig:grand}). The source-separation effect ($\langle r\rangle_{\rm single}-\langle r\rangle_{\rm mixed}$) ranges $+0.13$ to $+0.32$. This consistency across radically different mechanisms, depths, and timescales is the strongest evidence for an underlying principle.
+\subsection{The point estimate is geochronologically unresolvable}
+Jittering each age within its quoted $1\sigma$ error and recomputing the pooled
+$\rbar$ produces broad distributions (Table~\ref{tab:audit};
+Figure~\ref{fig:mc}c). For orogenic gold the central 95\% of the Monte Carlo
+spans $\rbar\in[0.39,0.67]$---from the Poisson value to above GUE---with a median
+of $0.53$. The version~1 reported value ($0.678$) sits at the very top edge of
+that envelope. At $n=21$--$40$, far below the $n\gtrsim300$ needed to separate a
+scalar clock from GOE by rigidity, the spacing ratio simply cannot bear the
+interpretive weight version~1 placed on it.
+
+There is a deeper, instrument-level reason the sequential reading was never
+admissible. Genuine level repulsion is a property of the \emph{ordering} of
+closely spaced levels, so detecting it demands an absolute time resolution finer
+than the spacings being ordered. The chronometers underlying these compilations---
+U--Pb on zircon and xenotime, $^{40}$Ar/$^{39}$Ar on muscovite, Re--Os on
+arsenopyrite and molybdenite---carry intrinsic $1\sigma$ uncertainties of order
+$\pm 1$--$5$~Ma, which are comparable to or larger than the within-source
+intervals themselves. Any micro-scale sequential rigidity that a Wigner--Dyson
+spectrum would require is therefore convolved away by the dating errors before it
+could be measured: the analytical resolution available in ore geochronology is, on
+its face, insufficient to support a level-repulsion statistic. The high $\rbar$
+that does survive this smearing is exactly what a narrow marginal (a scalar clock)
+produces, because $\rbar$ from a narrow CV is robust to jitter while sequential
+rigidity is not.
+
+\subsection{What survives: superposition $\to$ Poisson}
+The superposition result is unaffected and we retain it. When intervals from many
+independent sources are pooled \emph{without} source isolation, the spacing ratio
+collapses toward Poisson (Figure~\ref{fig:mc}d): mixed $\rbar=0.47$ (Andean),
+$0.31$ (Nanling), $0.39$ (Tethyan), $0.43$ (gold), against single-source values of
+$0.57$--$0.71$. This is the standard superposition theorem---the sum of many
+independent renewal processes tends to Poisson \citep{daley2003}---and it is a
+genuine, mechanism-independent feature of the data. It says nothing about level
+repulsion; it says that mixing erases the marginal clock of each source.
+
+Removing the spurious single-source GOE claim does not weaken this result; it
+strengthens it. The superposition collapse never depended on the local statistic
+being GOE---only on each source carrying \emph{some} non-Poisson marginal clock,
+which the scalar-clock reading supplies just as well. With the pseudo-repulsion
+artifact cleared away, the one robust, scale-independent statement the pipeline
+supports stands on firmer ground: independent metallogenic sources, superposed,
+lose their individual rhythms and the pooled timing relaxes to a memoryless
+Poisson process. That is the finding worth carrying forward.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=\textwidth]{figs/fig2_grand_unification.pdf}
-\caption{Five physically unrelated deep-Earth systems. Single-source configurations (red, with bootstrap CIs) all exclude Poisson and reach the GOE--GUE range; mixed configurations (blue) collapse. The non-magmatic orogenic-gold case (annotated) cuts off the ``inherited from magma'' explanation.}
-\label{fig:grand}
+\includegraphics[width=\textwidth]{figs/fig2_age_error_superposition.pdf}
+\caption{(c)~Age-error Monte Carlo. Box plots of the pooled $\rbar$ when ages are
+jittered within their quoted $1\sigma$ errors; stars mark the version~1 reported
+values. The estimates float across the Poisson--GUE range; the v1 gold value sits
+at the top edge. (d)~The retained, real result: single (isolated-source) vs mixed
+(superposed) $\rbar$. Superposition drives the local statistic toward Poisson
+($0.386$).}
+\label{fig:mc}
 \end{figure}
 
 \section{Discussion}
 
-\subsection{A unifying principle}
-Across five systems a single principle organizes the results: \emph{GOE-class level repulsion emerges wherever a single long-memory process is isolated, and Poisson emerges wherever many independent sources superpose}. The charge-and-release mechanism for ore systems is the metallogenic instance: a pulse exhausts a local resource that requires time to replenish, forbidding short recurrence intervals.
+\subsection{Scalar clock versus level repulsion}
+The corrected picture places these systems firmly at the scalar-clock end of the
+diagnostic axis. A high $\rbar$ that is shuffle-invariant, CV-determined, and
+reproduced by an i.i.d.\ renewal clock is the signature of a narrow marginal
+spacing distribution---a system with a characteristic recurrence time and
+independent successive intervals. That is precisely what a charge-and-release
+reservoir is: a relaxation oscillator. It is the same object as a dripping tap,
+a geyser, a glacial j\"okulhlaup cycle, or a nucleosome spacing ruler---all of
+which give high $\rbar$ for the same reason and none of which is a GOE spectrum.
+Genuine level repulsion, by contrast, requires a chaotic, strongly-mixed spectrum
+(open $d/f$ shells, heavy nuclei, hydrogen in a strong magnetic field) per the
+Bohigas--Giannoni--Schmit criterion \citep{bgs1984}, and shows resolvable spectral
+rigidity (obs$<$shuf) at large $n$. The ore data show none of this.
 
-\subsection{Progress on intrinsic versus extrinsic}
-The non-magmatic control advances the central question. Were the repulsion merely inherited from magmatic cyclicity, orogenic gold---lacking magmatism---should not show it; yet it shows among the strongest repulsion of the four provinces. This favours an intrinsic interpretation: ore systems possess their own charge-release memory, independent of magmatic forcing. The argument is indirect (a mechanism contrast, not a per-district pairing), and the definitive test remains comparing, within a single district, the RMT spectra of ore-mineral versus magmatic-mineral ages---which requires datasets dense in both, currently unavailable. But the non-magmatic result removes the simplest extrinsic explanation.
+The distinction is one of dynamical class, not of degree. A charge-and-release
+reservoir has a single effective degree of freedom---an accumulating budget that
+discharges past a threshold---so its dynamics live on a classical limit cycle and
+its inter-event statistics are those of a one-dimensional renewal process.
+Wigner--Dyson statistics, on the other hand, are the fingerprint of a
+high-dimensional, strongly-coupled, non-integrable system whose levels genuinely
+interact. Reading a metallogenic clock as GOE therefore mistakes a classical,
+effectively isolated relaxation oscillation for quantum-grade strong coupling---it
+assigns a one-degree-of-freedom threshold process to a universality class reserved
+for chaotic many-body spectra. The general lesson for applied RMT is that a high
+spacing ratio is a necessary but not sufficient condition for level repulsion:
+without the shuffle test, a CV check, and a renewal-clock null, any narrow-marginal
+recurrence will masquerade as a repelling spectrum.
+
+\subsection{Why the non-magmatic ``control'' does not rescue the claim}
+Version~1's strongest argument was that orogenic gold---non-magmatic---shows the
+same high $\rbar$, supposedly cutting off an ``inherited from magma'' explanation
+and implying intrinsic repulsion. The argument fails because the premise (that the
+high $\rbar$ \emph{is} repulsion) is false. Orogenic gold has the same high
+$\rbar$ as the magmatic provinces because it is the same kind of object---a scalar
+renewal clock (here, a low-CV cluster of multi-method ages on a few mineralizing
+episodes), not because it shares an intrinsic repulsion mechanism. The
+cross-cratonic consistency of the gold $\rbar$ is consistency of a scalar clock,
+not of level repulsion.
+
+\subsection{What can still be said}
+Two statements remain defensible. First, individual ore systems behave as scalar
+charge-release clocks: their pulse intervals cluster around a characteristic
+recurrence time, consistent with reservoir recharge dynamics, but with no evidence
+of sequential level repulsion at present resolution. Second, superposition of many
+sources randomizes timing toward Poisson, so any clock signature is a single-source
+phenomenon. Neither statement invokes random-matrix universality, and the paper no
+longer claims it.
 
 \subsection{Limitations}
-Sample sizes are modest (21--40 pooled intervals per province); dating methods are heterogeneous; economic-selection bias over-represents giant deposits; and orogenic gold operates on Gyr-aged cratons with Myr-scale inter-pulse intervals, a different timescale from the Myr-aged porphyry systems with $10^5$--$10^6$ yr pulses. GOE-versus-GUE is unresolved at present sample sizes. A systematic database-level follow-up is the natural next step.
+Beyond the corrected interpretation: sample sizes are small ($n=21$--$40$ pooled
+intervals); dating methods are heterogeneous and the within-deposit intervals are
+dominated by inter-method scatter; ages are representative literature values, not a
+census; and the geochronological errors alone make the spacing ratio unresolvable.
+A genuine test of recurrence structure would need many tens of resolved,
+single-method pulse ages within one system---currently unavailable.
 
 \section{Conclusions}
-Single ore-forming systems in four metallogenic provinces---spanning subduction, intracontinental, collisional, and metamorphic (non-magmatic) settings---show GOE-class level repulsion in their multi-stage timing, collapsing to Poisson when mixed. The non-magmatic orogenic-gold control shows that the repulsion is not merely inherited from magmatic cyclicity, supporting an intrinsic charge-and-release memory. Together with mantle plumes, the result unifies five physically unrelated deep-Earth systems under one principle: single long-memory sources repel; superposed sources randomize. The definitive intrinsic-versus-extrinsic test awaits per-district datasets dense in both ore and magmatic ages.
+We retract the version~1 claim that single ore-forming systems show GOE/GUE level
+repulsion. The high spacing ratios are reproduced exactly but are shuffle-invariant,
+CV-determined, reproduced by a zero-repulsion renewal clock, contaminated by a
+closed-data normalization artifact in their apparent ``rigidity,'' and unresolvable
+within age error. A charge-and-release reservoir is a relaxation oscillator---a
+scalar renewal clock---which by the Bohigas--Giannoni--Schmit criterion is
+structurally not a GOE spectrum. What survives is the superposition result:
+pooling independent sources drives the timing toward Poisson. We keep the data and
+the superposition analysis, and reframe single ore systems as scalar
+charge-release clocks rather than level-repulsive spectra. The correction follows
+the scalar-clock audit, Zenodo \url{https://doi.org/10.5281/zenodo.20980670}.
 
 \section*{Code and Data Availability}
-All code, compiled datasets, and figures: \url{https://github.com/Ruqing1963/metallogeny-rmt}.\\
-Companion studies: \url{https://zenodo.org/records/20766310} ; \url{https://zenodo.org/records/20768130} ; \url{https://zenodo.org/records/20768420}.
+All code (including the new \texttt{code/audit\_scalar\_clock.py}), compiled
+datasets, and figures: \url{https://github.com/Ruqing1963/metallogeny-rmt}.
+Version~1 is preserved in the git history (tag \texttt{v1.0}), in
+\texttt{paper/archive/v1/}, and as the prior Zenodo version. Methodological basis
+of the correction: Zenodo \url{https://doi.org/10.5281/zenodo.20980670}.
 
 \begin{thebibliography}{20}
 \bibitem[At\'as et al.(2013)]{atas2013} At\'as, Y.Y., Bogomolny, E., Giraud, O., Roux, G. (2013). Distribution of the ratio of consecutive level spacings. \textit{Phys. Rev. Lett.}, 110, 084101.
+\bibitem[Bohigas et al.(1984)]{bgs1984} Bohigas, O., Giannoni, M.-J., Schmit, C. (1984). Characterization of chaotic quantum spectra and universality of level fluctuation laws. \textit{Phys. Rev. Lett.}, 52, 1--4.
 \bibitem[Chelle-Michou et al.(2017)]{chelle2017} Chelle-Michou, C., Rottier, B., Caricchi, L., Simpson, G. (2017). Tempo of magma degassing and porphyry copper genesis. \textit{Scientific Reports}, 7, 40566.
-\bibitem[Chen(2026a)]{chen2026geo} Chen, R. (2026a). Statistical isomorphism between Phanerozoic tectonic rhythms and Riemann zeta zero spacings. Zenodo, \url{https://zenodo.org/records/20766310}.
-\bibitem[Chen(2026b)]{chen2026fault} Chen, R. (2026b). From hypothesis to reality: scale-dependent universality classes in Earth's seismotectonic rhythms. Zenodo, \url{https://zenodo.org/records/20768130}.
-\bibitem[Chen(2026c)]{chen2026plume} Chen, R. (2026c). Level repulsion in the deep Earth: a random matrix theory analysis of mantle-plume eruption rhythms. Zenodo, \url{https://zenodo.org/records/20768420}.
+\bibitem[Chen(2026)]{chen2026audit} Chen, R. (2026). A scalar clock is not level repulsion: a fourth spurious-GOE hazard and a re-audit of metallogenic timing. Zenodo, \url{https://doi.org/10.5281/zenodo.20980670}.
 \bibitem[Daley \& Vere-Jones(2003)]{daley2003} Daley, D.J., Vere-Jones, D. (2003). \textit{An Introduction to the Theory of Point Processes}, Vol. I. Springer.
 \bibitem[Deckart et al.(2013)]{deckart2013} Deckart, K., Clark, A.H., Cuadra, P., Fanning, M. (2013). Time-space evolution of the Rio Blanco-Los Bronces porphyry Cu-Mo cluster. \textit{Mineralium Deposita}, 48, 57--79.
-\bibitem[Goldfarb et al.(2005)]{goldfarb2005} Goldfarb, R.J., Baker, T., Dub\'e, B., et al. (2005). Distribution, character, and genesis of gold deposits in metamorphic terranes. \textit{Economic Geology 100th Anniversary Volume}, 407--450.
 \bibitem[Hou et al.(2009)]{hou2009} Hou, Z., et al. (2009). The Miocene Gangdese porphyry copper belt, southern Tibet. \textit{Ore Geology Reviews}, 36, 25--51.
 \bibitem[Maksaev et al.(2004)]{maksaev2004} Maksaev, V., et al. (2004). New chronology for El Teniente. \textit{SEG Special Publication}, 11, 15--54.
 \bibitem[Mao et al.(2017)]{mao2017} Mao, J., et al. (2017). Granite-related W-Sn mineralization in South China. \textit{Ore Geology Reviews}, 81, 1045--1058.
 \bibitem[Mehta(2004)]{mehta2004} Mehta, M.L. (2004). \textit{Random Matrices}, 3rd ed. Elsevier.
 \bibitem[Oberth\"ur et al.(1998)]{oberthur1998} Oberth\"ur, T., et al. (1998). Ages of gold mineralization, Ashanti belt, Ghana. \textit{Economic Geology}, 93, 289--309.
+\bibitem[Oganesyan \& Huse(2007)]{oganesyan2007} Oganesyan, V., Huse, D.A. (2007). Localization of interacting fermions at high temperature. \textit{Phys. Rev. B}, 75, 155111.
 \bibitem[Pelletier et al.(2022)]{pelletier2022} Pelletier, M., et al. (2022). U--Pb vein xenotime geochronology of orogenic gold, Malartic-Val-d'Or, Abitibi. \textit{Mineralium Deposita}, 57, 1469--1490.
 \bibitem[Romero et al.(2011)]{romero2011} Romero, B., et al. (2011). Re-Os geochronology of the Escondida porphyry deposits. \textit{Resource Geology}, 61, 91--100.
 \bibitem[Sillitoe(2010)]{sillitoe2010} Sillitoe, R.H. (2010). Porphyry copper systems. \textit{Economic Geology}, 105, 3--41.

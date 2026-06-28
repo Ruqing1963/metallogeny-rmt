@@ -1,0 +1,147 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{natbib}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{setspace}
+\usepackage{xcolor}
+\usepackage{xurl}
+\onehalfspacing
+\hypersetup{colorlinks=true,linkcolor=blue!60!black,citecolor=blue!60!black,urlcolor=blue!60!black,breaklinks=true}
+
+\title{\textbf{Charge-and-Release Rhythms in Ore-Forming Systems:\\
+A Random Matrix Theory Test of Metallogenic Timing across\\
+Four Provinces, Including a Non-Magmatic Control}\\[4pt]
+\large Single Ore Systems Show Level Repulsion Whether or Not\\
+Magmatism Is Involved}
+
+\author{Ruqing Chen\\
+\textit{GUT Geoservice Inc., Montreal, Canada}\\
+\texttt{ruqing@hotmail.com}}
+\date{June 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We test whether the timing of ore-forming pulses within hydrothermal mineral deposits carries the level-repulsion signature of random matrix theory (RMT), extending a program that found GOE-class repulsion in geological boundaries, seismotectonic rhythms, and mantle-plume eruptions. The motivation is a charge-and-release hypothesis: each mineralization pulse depletes the local metal, fluid, and heat budget of an ore system, which must re-accumulate before the next pulse, imposing a minimum recurrence interval analogous to eigenvalue repulsion. Using compiled multi-stage geochronology from \emph{four} metallogenic provinces---Andean porphyry copper (subduction arc; 11 districts), South China Nanling W--Sn (intracontinental granite; 15 deposits), Tethyan porphyry copper (collisional; 9 districts), and orogenic gold (metamorphic, \emph{non-magmatic}; 10 deposits across the Yilgarn, Abitibi, and West African cratons)---we contrast single-source and mixed configurations. \textbf{Single sources show level repulsion in all four provinces}: pooled spacing ratios are $\langle r\rangle=0.60$ (Chile), 0.57 (Nanling), 0.71 (Tethyan), and 0.68 (gold), with bootstrap 95\% confidence intervals that all exclude Poisson (0.386). \textbf{Mixed} configurations collapse toward Poisson ($\langle r\rangle=0.31$--0.47). The source-separation effect is consistent across all five deep-Earth systems we have now studied (mantle plumes plus these four). Crucially, \emph{orogenic gold---whose fluids derive from metamorphic devolatilization, not magmatism---shows the same repulsion}, which cuts off the explanation that the signal is merely inherited from magmatic-intrusion cyclicity and supports an intrinsic charge-release memory. We argue for a unifying principle: GOE-class repulsion emerges wherever a single long-memory process is isolated, and Poisson emerges wherever many independent sources superpose. We remain explicit that the compiled ages are representative literature values, not a systematic census, and that GOE-versus-GUE is not resolved at present sample sizes.
+
+\medskip
+\noindent\textbf{Keywords:} random matrix theory; metallogeny; porphyry copper; tungsten-tin; orogenic gold; ore geochronology; level repulsion; spectral superposition
+
+\medskip
+\noindent\textbf{Code/data:} \url{https://github.com/Ruqing1963/metallogeny-rmt}\\
+\textbf{Companion studies:} \url{https://zenodo.org/records/20766310} ; \url{https://zenodo.org/records/20768130} ; \url{https://zenodo.org/records/20768420}
+\end{abstract}
+
+\section{Introduction}
+
+Ore deposits form in pulses. A single porphyry copper system, granite-related W--Sn deposit, or orogenic gold camp typically records several discrete mineralization stages \citep{sillitoe2010,chelle2017}. Whether the timing of these pulses is random or carries memory is a question about the dynamics of ore-forming systems.
+
+We propose a \emph{charge-and-release hypothesis}: each major mineralization pulse depletes the local reservoir of metal, fluid, and heat, which must then re-accumulate before the next pulse can occur. This imposes a minimum recurrence interval and a suppression of short inter-pulse spacings---the level repulsion of random matrix theory \citep{wigner1957,mehta2004}. The mechanism is structurally identical to the thermal-shadow mechanism we proposed for mantle plumes \citep{chen2026plume}: a pulse exhausts a local resource that must be replenished.
+
+This study extends a three-racetrack RMT program \citep{chen2026geo,chen2026fault,chen2026plume} to metallogeny. A recurring lesson is the spectral superposition theorem: the sum of many independent renewal processes tends to Poisson \citep{daley2003}, so single-source signals are erased by mixing. We design around source isolation.
+
+The central scientific subtlety of metallogeny is that ore formation in magmatic-hydrothermal systems is externally triggered by tectonic-magmatic events \citep{sillitoe2010}, so a GOE signal could be \emph{inherited} from magmatic cyclicity rather than reflecting intrinsic charge-release memory. We address this directly by including a non-magmatic control: orogenic gold deposits, whose ore fluids derive from metamorphic devolatilization during orogenesis, with no direct genetic link to magmatism \citep{goldfarb2005}. If orogenic gold also shows repulsion, the signal cannot be merely inherited from magmatic intrusion timing.
+
+\section{Data and Methods}
+
+\subsection{Datasets}
+We compiled multi-stage absolute ages for four provinces. (1)~\emph{Andean porphyry copper}: 51 ages, 11 districts, dominated by Re--Os molybdenite \citep{maksaev2004,romero2011,deckart2013}. (2)~\emph{South China Nanling W--Sn}: 51 ages, 15 deposits, combining zircon U--Pb, molybdenite Re--Os, cassiterite U--Pb, and muscovite Ar--Ar \citep{mao2017,zhou2016}. (3)~\emph{Tethyan porphyry copper}: 30 ages, 9 districts spanning Tibet (Gangdese/Yulong), Iran (Kerman/Arasbaran), and Pakistan (Chagai) \citep{hou2009,yang2017}. (4)~\emph{Orogenic gold}: 32 ages, 10 deposits across the Yilgarn (Australia), Abitibi (Canada), and West African cratons, using U--Pb xenotime/monazite, Re--Os sulfide, and Ar--Ar \citep{vielreicher2010,pelletier2022,oberthur1998}. Each district/deposit is treated as a single ore-forming source.
+
+\noindent\textbf{Data caveat.} These are representative ages from the published literature and reviews, not a systematic census, and suffice for a feasibility-level test.
+
+\subsection{RMT analysis}
+We sort ages, compute inter-event intervals, normalize each source to unit mean (unfolding), pool, and evaluate the spacing ratio $\langle r\rangle$ \citep{atas2013} (Poisson 0.386, GOE 0.536, GUE 0.603), KS tests, and a bootstrap 95\% CI. Per-source unfolding prevents differing mean rates from inducing structure.
+
+\section{Results}
+
+\subsection{All four provinces show single-source repulsion}
+Pooling per-source unfolded intervals yields level repulsion in every province (Table~\ref{tab:main}, Figure~\ref{fig:four}). All four bootstrap CIs exclude Poisson; KS tests reject Poisson and prefer GOE/GUE.
+
+\begin{table}[H]
+\centering
+\caption{Single-source (pooled) versus mixed configurations across four metallogenic provinces. Every province shows repulsion when sources are isolated and collapses when mixed.}
+\label{tab:main}
+\small
+\begin{tabular}{llccccc}
+\toprule
+Province (setting) & Config. & $n$ & $\langle r\rangle$ & $\hat\beta$ & 95\% CI & Mixed $\langle r\rangle$ \\
+\midrule
+Andean porphyry Cu (subduction) & Single & 40 & 0.601 & 1.97 & [0.471, 0.670] & 0.470 \\
+Nanling W--Sn (intracontinental) & Single & 36 & 0.574 & 1.57 & [0.488, 0.685] & 0.307 \\
+Tethyan porphyry Cu (collision) & Single & 21 & 0.712 & 3.00 & [0.510, 0.797] & 0.391 \\
+Orogenic gold (\emph{non-magmatic}) & Single & 22 & 0.678 & 2.75 & [0.606, 0.823] & 0.432 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figs/fig1_four_province.pdf}
+\caption{Single-source pooled spacing distributions for all four metallogenic provinces. Each lies in the GOE--GUE range; none is Poisson.}
+\label{fig:four}
+\end{figure}
+
+\subsection{The non-magmatic control}
+Orogenic gold, whose fluids derive from metamorphic devolatilization with no direct magmatic link, shows repulsion as strong as the magmatic provinces ($\langle r\rangle=0.678$, CI $[0.606,0.823]$). Grouped by craton, the signal is consistent: Yilgarn $\langle r\rangle=0.65$, Abitibi 0.77, West Africa 0.68, with a two-sample KS test between Yilgarn and Abitibi finding no difference ($p=0.83$). The repulsion is therefore a cross-cratonic feature of orogenic gold, not a peculiarity of one belt. Because no magmatism is involved, this repulsion cannot be inherited from magmatic-intrusion timing---it points to an intrinsic charge-release memory in the ore system itself (here, repeated fluid focusing along reactivated shear zones).
+
+\subsection{Grand unification across five systems}
+Combining with mantle plumes \citep{chen2026plume}, five physically unrelated systems---core--mantle boundary plumes, subduction-arc porphyry Cu, intracontinental granite W--Sn, collisional porphyry Cu, and metamorphic orogenic gold---all show single-source repulsion that collapses to Poisson on mixing (Figure~\ref{fig:grand}). The source-separation effect ($\langle r\rangle_{\rm single}-\langle r\rangle_{\rm mixed}$) ranges $+0.13$ to $+0.32$. This consistency across radically different mechanisms, depths, and timescales is the strongest evidence for an underlying principle.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figs/fig2_grand_unification.pdf}
+\caption{Five physically unrelated deep-Earth systems. Single-source configurations (red, with bootstrap CIs) all exclude Poisson and reach the GOE--GUE range; mixed configurations (blue) collapse. The non-magmatic orogenic-gold case (annotated) cuts off the ``inherited from magma'' explanation.}
+\label{fig:grand}
+\end{figure}
+
+\section{Discussion}
+
+\subsection{A unifying principle}
+Across five systems a single principle organizes the results: \emph{GOE-class level repulsion emerges wherever a single long-memory process is isolated, and Poisson emerges wherever many independent sources superpose}. The charge-and-release mechanism for ore systems is the metallogenic instance: a pulse exhausts a local resource that requires time to replenish, forbidding short recurrence intervals.
+
+\subsection{Progress on intrinsic versus extrinsic}
+The non-magmatic control advances the central question. Were the repulsion merely inherited from magmatic cyclicity, orogenic gold---lacking magmatism---should not show it; yet it shows among the strongest repulsion of the four provinces. This favours an intrinsic interpretation: ore systems possess their own charge-release memory, independent of magmatic forcing. The argument is indirect (a mechanism contrast, not a per-district pairing), and the definitive test remains comparing, within a single district, the RMT spectra of ore-mineral versus magmatic-mineral ages---which requires datasets dense in both, currently unavailable. But the non-magmatic result removes the simplest extrinsic explanation.
+
+\subsection{Limitations}
+Sample sizes are modest (21--40 pooled intervals per province); dating methods are heterogeneous; economic-selection bias over-represents giant deposits; and orogenic gold operates on Gyr-aged cratons with Myr-scale inter-pulse intervals, a different timescale from the Myr-aged porphyry systems with $10^5$--$10^6$ yr pulses. GOE-versus-GUE is unresolved at present sample sizes. A systematic database-level follow-up is the natural next step.
+
+\section{Conclusions}
+Single ore-forming systems in four metallogenic provinces---spanning subduction, intracontinental, collisional, and metamorphic (non-magmatic) settings---show GOE-class level repulsion in their multi-stage timing, collapsing to Poisson when mixed. The non-magmatic orogenic-gold control shows that the repulsion is not merely inherited from magmatic cyclicity, supporting an intrinsic charge-and-release memory. Together with mantle plumes, the result unifies five physically unrelated deep-Earth systems under one principle: single long-memory sources repel; superposed sources randomize. The definitive intrinsic-versus-extrinsic test awaits per-district datasets dense in both ore and magmatic ages.
+
+\section*{Code and Data Availability}
+All code, compiled datasets, and figures: \url{https://github.com/Ruqing1963/metallogeny-rmt}.\\
+Companion studies: \url{https://zenodo.org/records/20766310} ; \url{https://zenodo.org/records/20768130} ; \url{https://zenodo.org/records/20768420}.
+
+\begin{thebibliography}{20}
+\bibitem[At\'as et al.(2013)]{atas2013} At\'as, Y.Y., Bogomolny, E., Giraud, O., Roux, G. (2013). Distribution of the ratio of consecutive level spacings. \textit{Phys. Rev. Lett.}, 110, 084101.
+\bibitem[Chelle-Michou et al.(2017)]{chelle2017} Chelle-Michou, C., Rottier, B., Caricchi, L., Simpson, G. (2017). Tempo of magma degassing and porphyry copper genesis. \textit{Scientific Reports}, 7, 40566.
+\bibitem[Chen(2026a)]{chen2026geo} Chen, R. (2026a). Statistical isomorphism between Phanerozoic tectonic rhythms and Riemann zeta zero spacings. Zenodo, \url{https://zenodo.org/records/20766310}.
+\bibitem[Chen(2026b)]{chen2026fault} Chen, R. (2026b). From hypothesis to reality: scale-dependent universality classes in Earth's seismotectonic rhythms. Zenodo, \url{https://zenodo.org/records/20768130}.
+\bibitem[Chen(2026c)]{chen2026plume} Chen, R. (2026c). Level repulsion in the deep Earth: a random matrix theory analysis of mantle-plume eruption rhythms. Zenodo, \url{https://zenodo.org/records/20768420}.
+\bibitem[Daley \& Vere-Jones(2003)]{daley2003} Daley, D.J., Vere-Jones, D. (2003). \textit{An Introduction to the Theory of Point Processes}, Vol. I. Springer.
+\bibitem[Deckart et al.(2013)]{deckart2013} Deckart, K., Clark, A.H., Cuadra, P., Fanning, M. (2013). Time-space evolution of the Rio Blanco-Los Bronces porphyry Cu-Mo cluster. \textit{Mineralium Deposita}, 48, 57--79.
+\bibitem[Goldfarb et al.(2005)]{goldfarb2005} Goldfarb, R.J., Baker, T., Dub\'e, B., et al. (2005). Distribution, character, and genesis of gold deposits in metamorphic terranes. \textit{Economic Geology 100th Anniversary Volume}, 407--450.
+\bibitem[Hou et al.(2009)]{hou2009} Hou, Z., et al. (2009). The Miocene Gangdese porphyry copper belt, southern Tibet. \textit{Ore Geology Reviews}, 36, 25--51.
+\bibitem[Maksaev et al.(2004)]{maksaev2004} Maksaev, V., et al. (2004). New chronology for El Teniente. \textit{SEG Special Publication}, 11, 15--54.
+\bibitem[Mao et al.(2017)]{mao2017} Mao, J., et al. (2017). Granite-related W-Sn mineralization in South China. \textit{Ore Geology Reviews}, 81, 1045--1058.
+\bibitem[Mehta(2004)]{mehta2004} Mehta, M.L. (2004). \textit{Random Matrices}, 3rd ed. Elsevier.
+\bibitem[Oberth\"ur et al.(1998)]{oberthur1998} Oberth\"ur, T., et al. (1998). Ages of gold mineralization, Ashanti belt, Ghana. \textit{Economic Geology}, 93, 289--309.
+\bibitem[Pelletier et al.(2022)]{pelletier2022} Pelletier, M., et al. (2022). U--Pb vein xenotime geochronology of orogenic gold, Malartic-Val-d'Or, Abitibi. \textit{Mineralium Deposita}, 57, 1469--1490.
+\bibitem[Romero et al.(2011)]{romero2011} Romero, B., et al. (2011). Re-Os geochronology of the Escondida porphyry deposits. \textit{Resource Geology}, 61, 91--100.
+\bibitem[Sillitoe(2010)]{sillitoe2010} Sillitoe, R.H. (2010). Porphyry copper systems. \textit{Economic Geology}, 105, 3--41.
+\bibitem[Vielreicher et al.(2010)]{vielreicher2010} Vielreicher, N., Groves, D., McNaughton, N. (2010). Timing of gold mineralization, Yilgarn craton. \textit{Mineralium Deposita}, 50, 391--428.
+\bibitem[Wigner(1957)]{wigner1957} Wigner, E.P. (1957). Characteristic vectors of bordered matrices. \textit{Ann. Math.}, 62, 548--564.
+\bibitem[Yang et al.(2017)]{yang2017} Yang, Z., et al. (2017). Cyclic magmatic-hydrothermal evolution of the Qulong porphyry Cu-Mo deposit, Tibet. \textit{Economic Geology}, 112, 1419--1440.
+\bibitem[Zhou et al.(2016)]{zhou2016} Zhou, Y., et al. (2016). Dating of the Xitian W-Sn deposit, South China. \textit{Ore Geology Reviews}, 78, 1--13.
+\end{thebibliography}
+
+\end{document}
