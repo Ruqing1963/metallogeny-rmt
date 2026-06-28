@@ -1,7 +1,8 @@
 cff-version: 1.2.0
 title: >-
-  Charge-and-Release Rhythms in Ore-Forming Systems: A Random
-  Matrix Theory Test of Metallogenic Timing across Four Provinces
+  Charge-and-Release Rhythms in Ore-Forming Systems Are
+  Scalar Clocks, Not Level Repulsion: A Cautionary
+  Random-Matrix Analysis of Metallogenic Timing
 message: If you use this software or data, please cite it using this metadata.
 type: software
 authors:
@@ -11,22 +12,28 @@ authors:
     affiliation: 'GUT Geoservice Inc., Montreal, Canada'
 repository-code: 'https://github.com/Ruqing1963/metallogeny-rmt'
 abstract: >-
-  Random matrix theory analysis of ore-deposit timing across four metallogenic
-  provinces (Andean, Nanling, Tethyan porphyry plus orogenic gold). Single
-  ore-forming systems show GOE-class level repulsion; mixing collapses to
-  Poisson. The non-magmatic orogenic-gold control shows repulsion too, cutting
-  off the inherited-from-magma explanation and supporting an intrinsic
-  charge-and-release memory. Fourth in a unified RMT program spanning Earth
-  from core to crust.
+  Version 2.0 erratum. This release retracts the v1 claim that single
+  ore-forming systems show GOE/GUE level repulsion in pulse timing. A high
+  nearest-neighbour spacing ratio is two-ended: it is equally produced by a
+  narrow-marginal scalar renewal clock (relaxation oscillator) that carries no
+  sequential repulsion. A shuffle test shows the ore-system signal lives in the
+  interval marginal, not the sequence; a zero-repulsion i.i.d. gamma clock
+  matched to each province's coefficient of variation and finite N brackets every
+  observed value; and by Bohigas-Giannoni-Schmit a scalar charge-release
+  reservoir is integrable and hence structurally not GOE. The non-magmatic
+  orogenic-gold control is a closed-data artifact of the v1 normalisation.
+  Retained as real: superposition of independent sources drives the spacing ratio
+  to the Poisson value. Version 1 is preserved as a prior version.
 keywords:
   - random matrix theory
   - metallogeny
-  - porphyry copper
-  - tungsten-tin
-  - orogenic gold
   - ore geochronology
-  - level repulsion
+  - spacing ratio
+  - renewal process
+  - scalar clock
   - spectral superposition
+  - self-correction
+  - erratum
 license: MIT
-version: 1.0.0
-date-released: '2026-06-19'
+version: 2.0.0
+date-released: '2026-06-27'
