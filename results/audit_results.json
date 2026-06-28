@@ -1,0 +1,90 @@
+{
+  "Andean porphyry Cu (subduction)": {
+    "n": 40,
+    "r_obs": 0.6008156009825624,
+    "r_shuf": 0.5606883483202719,
+    "obs_minus_shuf": 0.04012725266229045,
+    "cv": 0.5447809931648779,
+    "r_gamma_finiteN_median": 0.580039662091893,
+    "r_gamma_finiteN_ci": [
+      0.4908276480672413,
+      0.6659036772035472
+    ],
+    "gamma_shape_k": 3.369427420289502,
+    "gamma_brackets_obs": true,
+    "null_obs_minus_shuf": -0.024595949125712575,
+    "null_obs_minus_shuf_sd": 0.025357440955882837,
+    "mc_r_p2.5": 0.36585200872107576,
+    "mc_r_median": 0.4602546845350201,
+    "mc_r_p97.5": 0.5587160965527495,
+    "mc_range_tag": "narrow",
+    "v1_reported_r": 0.601,
+    "v1_above_mc_median": true
+  },
+  "Nanling W-Sn (intracontinental)": {
+    "n": 36,
+    "r_obs": 0.5744343902370841,
+    "r_shuf": 0.5750963409908173,
+    "obs_minus_shuf": -0.0006619507537332092,
+    "cv": 0.5779032322029493,
+    "r_gamma_finiteN_median": 0.5641246289607931,
+    "r_gamma_finiteN_ci": [
+      0.4659472685972926,
+      0.6588563686297274
+    ],
+    "gamma_shape_k": 2.994261685005763,
+    "gamma_brackets_obs": true,
+    "null_obs_minus_shuf": -0.03669900810053242,
+    "null_obs_minus_shuf_sd": 0.02354511585805152,
+    "mc_r_p2.5": 0.3510152719399574,
+    "mc_r_median": 0.4545593644730228,
+    "mc_r_p97.5": 0.5646088511759199,
+    "mc_range_tag": "wide",
+    "v1_reported_r": 0.574,
+    "v1_above_mc_median": true
+  },
+  "Tethyan porphyry Cu (collision)": {
+    "n": 21,
+    "r_obs": 0.7123027456261373,
+    "r_shuf": 0.6385497594951984,
+    "obs_minus_shuf": 0.07375298613093884,
+    "cv": 0.5086639105799521,
+    "r_gamma_finiteN_median": 0.5988661710580001,
+    "r_gamma_finiteN_ci": [
+      0.48069936480023184,
+      0.7130486245988343
+    ],
+    "gamma_shape_k": 3.8648989938566842,
+    "gamma_brackets_obs": true,
+    "null_obs_minus_shuf": -0.03535755342313282,
+    "null_obs_minus_shuf_sd": 0.03235622231238931,
+    "mc_r_p2.5": 0.3694106439656906,
+    "mc_r_median": 0.5057715133405289,
+    "mc_r_p97.5": 0.6493407156297645,
+    "mc_range_tag": "Poisson->GUE",
+    "v1_reported_r": 0.712,
+    "v1_above_mc_median": true
+  },
+  "Orogenic gold (NON-magmatic)": {
+    "n": 22,
+    "r_obs": 0.6780302006152825,
+    "r_shuf": 0.7092191790377994,
+    "obs_minus_shuf": -0.03118897842251689,
+    "cv": 0.309599446298614,
+    "r_gamma_finiteN_median": 0.7259318263203955,
+    "r_gamma_finiteN_ci": [
+      0.633372759413507,
+      0.8079685285740347
+    ],
+    "gamma_shape_k": 10.432770392361883,
+    "gamma_brackets_obs": true,
+    "null_obs_minus_shuf": -0.028465712648055294,
+    "null_obs_minus_shuf_sd": 0.02076531098755614,
+    "mc_r_p2.5": 0.39015638261267255,
+    "mc_r_median": 0.5255804569593527,
+    "mc_r_p97.5": 0.6690577396327042,
+    "mc_range_tag": "Poisson->GUE",
+    "v1_reported_r": 0.678,
+    "v1_above_mc_median": true
+  }
+}
